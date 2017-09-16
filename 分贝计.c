@@ -1,4 +1,4 @@
-#include <STC12C5A60S2.H>//
+#include <STC12C5A60S2.H>
 #include<INTRINS.H>
 
 #define uchar unsigned char
