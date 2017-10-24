@@ -49,6 +49,12 @@ uchar code DPY[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90,0xBF,0xFF};/
 uchar display[3]={0x0A,0x0A,0x0A};//"---"
 uchar maxvalue=80,minvalue=20,value=80,t0_num,t1_num,digit,adc_code[3];
 
+/*
+ * Delay effect
+ *
+ * @param[in]  Delay time
+ * 
+ */
 void DELAYMS(uchar nms)
 {
 	uchar i;
@@ -58,13 +64,20 @@ void DELAYMS(uchar nms)
 	}
 }
 
+/*
+ *ADC initialization
+ *
+ */
 void ADC_INIT()//OK
 {
 	P1ASF=0x01;//P1.0 ADC0
 	ADC_CONTR=ADC_POWER|ADC_SPEEDLL|ADC_CH0;
 	DELAYMS(1);
 }
-
+/*
+ *POWER OFF
+ *
+ */
 void ADC_POWEROFF()//OK
 {
 	ADC_CONTR&=~ADC_POWER;
