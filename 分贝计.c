@@ -84,6 +84,10 @@ void ADC_POWEROFF()//OK
 	DELAYMS(1);
 }
 
+/*
+ *KEYSCAN
+ *
+ */
 void KEYSCAN()
 {
 	if((S2keylock==UNLOCK)&&(S2==0))
@@ -349,6 +353,10 @@ void KEYSCAN()
 	}//OK
 }//OK
 
+/*
+ *ADC init
+ *
+ */
 void ADC()//OK
 {
 	uchar i,k,bw,sw,gw,dbvalue;
@@ -399,6 +407,10 @@ void DPY_ON()//OK
 	DELAYMS(2);
 }
 
+/*
+ *mian
+ *
+ */
 void main()//OK
 {
 	TMOD=0x11;
@@ -412,6 +424,10 @@ void main()//OK
 	}
 }
 
+/*
+ *interrupt 1 
+ *
+ */
 void T0_IRQ()interrupt 1//OK
 {
 	TR0=0;
@@ -463,6 +479,10 @@ void T0_IRQ()interrupt 1//OK
 	TR0=1;
 }
 
+/*
+ *interrupt 3
+ *
+ */
 void T1_IRQ()interrupt 3//OK
 {
 	TR1=0;
