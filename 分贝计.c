@@ -1,10 +1,10 @@
 / * ************************************************ *************************
-版权所有：2017年，money89757
-文件名：main.c
-说明：运用STC51单片机做成的分贝仪
-作者：money89757
-日期：2017年9月18日
-历史：2017-9-18：更新一些注释和端口
+copyright：2017，money89757
+name：main.c
+explain：A decibel meter made of STC51 single chip microcomputer
+author：money89757
+date：2017/9/18
+histor：2017-9-18：Update some notes and ports
 ************************************************** ********************* * * /
 #include <STC12C5A60S2.H>
 #include<INTRINS.H>
