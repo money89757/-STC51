@@ -29,6 +29,12 @@ void Delayms(uint ms)
     {for(i=123;i>0;i--);}
 }
 
+/*
+ * Delay effect
+ *
+ * @param[in]  Delay time
+ * 
+ */
 void Display()
 {P0=DPY[DPY3[0]];
  W1=W2=1;W3=0;
@@ -41,6 +47,10 @@ void Display()
  Delayms(2);
 }
 
+/*
+ * Main
+ * 
+ */
 void main()
 {TMOD=0x01;
  EA=1;
@@ -88,6 +98,10 @@ void main()
     }
 }
 
+/*
+ * Timer 0 interrupt 1
+ * 
+ */
 void Timer0()interrupt 1
 {TH0=(65536-50000)/256;
  TL0=(65536-50000)%256;
