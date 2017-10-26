@@ -1,3 +1,9 @@
+/ * ************************************************ *************************
+copyright：2017，money89757
+name：led_demo.c
+explain：Character device framework
+author：money89757
+************************************************** ********************* * * /
 #include <linux/module.h> 
 #include <linux/kernel.h>
 #include <linux/init.h>
@@ -21,6 +27,8 @@ struct class *led_class;
 struct device *dev;
 
 dev_t devno;
+
+
 static void led_init(void)
 {
     writel((readl(gpx2con)& ~(0xf<<28)) |(0x1<<28),gpx2con) ;
