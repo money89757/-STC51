@@ -28,22 +28,42 @@ struct device *dev;
 
 dev_t devno;
 
-
+/**
+ * LED init
+ */
 static void led_init(void)
 {
     writel((readl(gpx2con)& ~(0xf<<28)) |(0x1<<28),gpx2con) ;
 }
 
+
+/**
+ * LED open
+ *
+ */
 static void led_on(void)
 {
     writel(readl(gpx2dat) |(0x1<<7), gpx2dat);  
 }
 
+/**
+ * LED close
+ *
+ */
 static void led_off(void)
 {
     writel(readl(gpx2dat) &(~(0x1<<7)), gpx2dat);  
 }
 
+/**
+ * Transmit data on a UART interface
+ *
+ * @param  inode     pointer to the start of data
+ * @param  file     
+ * 
+ *
+ * @return  0 success.
+ */
 static int led_demo_open(struct inode *inode, struct file *file)
 {
 	printk("led: device open\n");
