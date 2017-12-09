@@ -10,3 +10,5 @@
 * [字符设备框架LED](https://github.com/money89757/Small-projects/blob/master/led_demo.c)
 
 * [杂项设备框架beep](https://github.com/money89757/Small-projects/blob/master/beep.c)
+
+* [面部识别](https://github.com/money89757/Small-projects/tree/master/face_led_pi)
