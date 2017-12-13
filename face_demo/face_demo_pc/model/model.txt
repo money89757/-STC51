@@ -1,0 +1,1 @@
+AcfAFLWFaceDetect_frontal_size60_58_lchaneli_grayDetector.bin
